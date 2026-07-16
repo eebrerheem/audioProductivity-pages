@@ -30,6 +30,6 @@ To publish this website on GitHub Pages:
 
 Before publishing, be sure to open the `.html` files in a text editor and replace the placeholder text:
 - Replace `[eebrerheem]` with your actual name or company name.
-- Replace `[eebrerheem@yahoo.com]` with your actual eebrerheem@yahoo.com address.
+- Replace `eebrerheem@yahoo.com` with your actual eebrerheem@yahoo.com address.
 
 You can also replace the `images/logo.png` file with your own high-resolution app icon.
