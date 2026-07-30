@@ -18,27 +18,28 @@
       <p>At <strong>Audio Productivity</strong> ("we", "our", or "us"), your privacy is our top priority. This Privacy Policy outlines how we collect, use, and protect your information when you use our mobile application.</p>
 
       <h2>1. Offline-First Architecture</h2>
-      <p>Audio Productivity is designed as an offline-first application. All core media processing—including trimming, converting, merging, compressing, and extracting audio—is performed entirely locally on your device. <strong>We do not upload, store, or process your media files on any remote servers.</strong> Your audio and video files remain strictly on your device.</p>
+      <p>Audio Productivity is designed as an offline-first application. All core media processing—including trimming, converting, merging, splitting, inserting audio, pitch & tempo adjustment, equalizer tuning, voice effects, noise suppression, silence removal, text-to-speech, recording, and metadata tag editing—is performed entirely locally on your device using FFmpeg and native system APIs. <strong>We do not upload, store, or process your media files or voice recordings on any remote servers.</strong> Your audio and video files remain strictly on your device.</p>
 
       <h2>2. Data Collection and Usage</h2>
-      <p>Because the app functions primarily offline, we do not require you to create an account, nor do we collect personally identifiable information (such as your name, email address, or phone number) during general use of the app.</p>
+      <p>Because the app functions offline, we do not require you to create an account, nor do we collect personally identifiable information (such as your name, email address, or phone number) during general use of the app.</p>
       
-      <p>However, we do integrate with third-party services to support the application's infrastructure and monetization:</p>
+      <p>However, we integrate with trusted third-party services to support app stability, monetization, and subscription management:</p>
 
       <h3>A. Analytics and Crash Reporting (Firebase)</h3>
-      <p>To improve app stability and performance, we may use tools like Google Analytics for Firebase and Firebase Crashlytics. These services collect anonymous usage data and crash logs (such as device model, OS version, and the time of the crash) to help us identify and fix bugs.</p>
+      <p>To improve app stability and performance, we may use Google Analytics for Firebase and Firebase Crashlytics. These services collect anonymous usage data and crash logs (such as device model, OS version, and stack trace) to help us diagnose bugs.</p>
 
       <h3>B. Advertising (Google AdMob)</h3>
-      <p>We use Google AdMob to display advertisements in the free version of the app. AdMob may collect and use data (including device advertising identifiers like the Apple IDFA or Google Advertising ID, IP address, and location data) to serve personalized or non-personalized ads. You can manage your ad personalization preferences through your device settings.</p>
+      <p>We use Google AdMob to display banner and rewarded advertisements in the free version of the app. AdMob may collect device advertising identifiers (such as Apple IDFA or Google Advertising ID), IP address, and technical diagnostic data to serve ads. You can manage your ad personalization preferences through your device privacy settings.</p>
 
       <h3>C. In-App Purchases (RevenueCat)</h3>
-      <p>We use RevenueCat to manage premium subscriptions and in-app purchases. When you make a purchase, RevenueCat generates an anonymous user identifier to track subscription status across your devices. We do not have access to your payment information (such as credit card details); all payments are processed securely by the Apple App Store or Google Play Store.</p>
+      <p>We use RevenueCat to manage PRO subscriptions and rewarded feature unlocks. When you make a purchase or watch a rewarded ad, RevenueCat generates an anonymous user identifier to track subscription status across your devices. We do not have access to your payment information (such as credit card details); all financial transactions are processed securely by the Apple App Store or Google Play Store.</p>
 
       <h2>3. Device Permissions</h2>
-      <p>To function correctly, Audio Productivity requests the following permissions:</p>
+      <p>To function correctly and provide its full range of editing tools, Audio Productivity requests the following device permissions:</p>
       <ul>
-        <li><strong>Storage/Photos/Media:</strong> To read the media files you select for editing and to save the processed output files back to your device.</li>
-        <li><strong>Notifications:</strong> To alert you when background processing tasks (like long file conversions) have completed.</li>
+        <li><strong>Microphone / Audio Recorder:</strong> Required only when you use the in-app Voice Recording feature. Audio is recorded directly to your local device storage and is never transmitted off your device.</li>
+        <li><strong>Storage / Photos & Media Access:</strong> Required to select audio and video files for editing and to save your exported media files back to your device storage.</li>
+        <li><strong>Notifications:</strong> Required to notify you when long-running background tasks (such as batch conversions or audio exports) complete.</li>
       </ul>
 
       <h2>4. Data Retention and Deletion</h2>
