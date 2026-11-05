@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Audio Productivity</title>
+  <title>Privacy Policy - Audio Productivity (Audio Pro)</title>
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,52 +11,74 @@
   <div class="container">
     <header>
       <h1>Privacy Policy</h1>
-      <p class="last-updated">Last Updated: July 2026</p>
+      <p class="last-updated">Last Updated: November 2026</p>
     </header>
 
     <div class="card">
-      <p>At <strong>Audio Productivity</strong> ("we", "our", or "us"), your privacy is our top priority. This Privacy Policy outlines how we collect, use, and protect your information when you use our mobile application.</p>
+      <p>At <strong>Audio Productivity</strong> (also known as <strong>Audio Pro</strong>, "we", "our", or "us"), your privacy is our top priority. This Privacy Policy explains how we handle, process, and protect your information when you use our mobile application.</p>
 
-      <h2>1. Offline-First Architecture</h2>
-      <p>Audio Productivity is designed as an offline-first application. All core media processing—including trimming, converting, merging, splitting, inserting audio, pitch & tempo adjustment, equalizer tuning, voice effects, noise suppression, silence removal, text-to-speech, recording, and metadata tag editing—is performed entirely locally on your device using FFmpeg and native system APIs. <strong>We do not upload, store, or process your media files or voice recordings on any remote servers.</strong> Your audio and video files remain strictly on your device.</p>
+      <h2>1. 100% On-Device &amp; Offline-First Architecture</h2>
+      <p>Audio Productivity is built as an offline-first studio application. All media processing, audio editing, library playback, and AI tasks are executed <strong>entirely locally on your device</strong>:</p>
+      <ul>
+        <li><strong>Audio &amp; Video Processing:</strong> Converting, extracting audio from video, compressing, trimming, splitting, multi-track timeline mixing, merging, inserting audio, looping, reversing, generating blank audio, volume boosting, loudness normalization, pitch &amp; tempo shifting, 10-band graphic equalizer tuning, spatial echo, voice effects, noise suppression, silence removal, and ID3 metadata/cover art tagging are powered locally on your device using FFmpeg and native media engines.</li>
+        <li><strong>On-Device AI Speech-to-Text (Whisper):</strong> Audio transcription and subtitle generation (plain text, timestamped segments, SRT, and VTT) for both imported audio files and live microphone speech run 100% offline on your device using local Whisper AI models (<code>whisper.cpp</code>).</li>
+        <li><strong>Text-to-Speech &amp; Studio Recording:</strong> Spoken audio synthesis and studio voice recordings are generated and saved directly to your device storage using native system APIs.</li>
+        <li><strong>Local Library, Playlists &amp; Usage Stats:</strong> Your audio library, custom playlists, playlist artwork, conversion history, and storage/compression statistics are stored strictly in local on-device databases (Hive and SharedPreferences).</li>
+      </ul>
+      <p><strong>We do not upload, transmit, store, or process your audio files, video files, voice recordings, transcriptions, or cover images on any remote servers.</strong></p>
 
-      <h2>2. Data Collection and Usage</h2>
-      <p>Because the app functions offline, we do not require you to create an account, nor do we collect personally identifiable information (such as your name, email address, or phone number) during general use of the app.</p>
+      <h2>2. Data Collection and Third-Party Services</h2>
+      <p>We do not require you to register an account, and we do not collect personally identifiable information (such as your name, email address, phone number, or biometric voice data) when you use the app.</p>
       
-      <p>However, we integrate with trusted third-party services to support app stability, monetization, and subscription management:</p>
+      <p>To support optional AI model downloads, app stability, advertising in the free tier, and subscription management, the app connects to the following services when an internet connection is available:</p>
 
-      <h3>A. Analytics and Crash Reporting (Firebase)</h3>
-      <p>To improve app stability and performance, we may use Google Analytics for Firebase and Firebase Crashlytics. These services collect anonymous usage data and crash logs (such as device model, OS version, and stack trace) to help us diagnose bugs.</p>
+      <h3>A. Offline AI Model Downloads</h3>
+      <p>When you use the Speech-to-Text feature for the first time or select a new recognition model, the app downloads the requested Whisper AI model file to your device's local storage. No audio or user content is sent during or after this download; once cached on your device, transcription operates completely offline.</p>
 
-      <h3>B. Advertising (Google AdMob)</h3>
-      <p>We use Google AdMob to display banner and rewarded advertisements in the free version of the app. AdMob may collect device advertising identifiers (such as Apple IDFA or Google Advertising ID), IP address, and technical diagnostic data to serve ads. You can manage your ad personalization preferences through your device privacy settings.</p>
+      <h3>B. Analytics and Crash Reporting (Google Firebase)</h3>
+      <p>We use Google Analytics for Firebase and Firebase Crashlytics to monitor app stability, diagnose crashes, and understand aggregate feature usage. These services may collect anonymous diagnostic data, such as device model, operating system version, app version, and crash stack traces. They do not have access to your media files or recordings.</p>
 
-      <h3>C. In-App Purchases (RevenueCat)</h3>
-      <p>We use RevenueCat to manage PRO subscriptions and rewarded feature unlocks. When you make a purchase or watch a rewarded ad, RevenueCat generates an anonymous user identifier to track subscription status across your devices. We do not have access to your payment information (such as credit card details); all financial transactions are processed securely by the Apple App Store or Google Play Store.</p>
+      <h3>C. Advertising (Google AdMob)</h3>
+      <p>We use Google AdMob to display banner, interstitial, and optional rewarded video advertisements to non-PRO users. AdMob may collect or use device advertising identifiers (such as Apple IDFA or Google Advertising ID), IP address, coarse location, and ad interaction diagnostics to serve and measure advertisements. Daily rewarded ad unlock counts are tracked locally on your device. You can manage or reset your ad personalization preferences at any time in your device's system privacy settings, or remove all ads by upgrading to Audio Pro.</p>
+
+      <h3>D. In-App Purchases &amp; Subscriptions (RevenueCat)</h3>
+      <p>We use RevenueCat to validate and manage Audio Pro subscriptions (Monthly, Yearly) and Lifetime purchases across your devices. RevenueCat uses an anonymous app user ID and purchase receipt tokens provided by Apple App Store or Google Play Store. We never receive or store your billing details or payment card information; all financial transactions are processed securely by Apple or Google.</p>
 
       <h2>3. Device Permissions</h2>
-      <p>To function correctly and provide its full range of editing tools, Audio Productivity requests the following device permissions:</p>
+      <p>Audio Productivity requests specific device permissions only when needed to perform the features you choose to use:</p>
       <ul>
-        <li><strong>Microphone / Audio Recorder:</strong> Required only when you use the in-app Voice Recording feature. Audio is recorded directly to your local device storage and is never transmitted off your device.</li>
-        <li><strong>Storage / Photos & Media Access:</strong> Required to select audio and video files for editing and to save your exported media files back to your device storage.</li>
-        <li><strong>Notifications:</strong> Required to notify you when long-running background tasks (such as batch conversions or audio exports) complete.</li>
+        <li><strong>Microphone (<code>RECORD_AUDIO</code>):</strong> Requested only when you record audio in the Studio Recorder or use Live Microphone mode in Speech-to-Text. Audio is processed and saved locally on your device and is never transmitted externally.</li>
+        <li><strong>Storage / Photos &amp; Media Library Access:</strong> Requested to import audio and video files for processing, select custom cover art for tracks and playlists from your photo gallery, browse local library folders, and save exported audio, video, or subtitle files to your device.</li>
+        <li><strong>Camera:</strong> Requested only if you choose to take a photo directly within the app to use as custom track or playlist artwork.</li>
+        <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Requested to alert you when background audio jobs or batch exports complete or require attention.</li>
+        <li><strong>Foreground Service &amp; Background Audio:</strong> Used to keep long-running batch conversions active while the app is minimized and to support continuous background audio playback with lock-screen media controls in the Library player.</li>
       </ul>
 
       <h2>4. Data Retention and Deletion</h2>
-      <p>Since your media files are processed locally, you maintain complete control over them. You can delete your processed files directly within the app or via your device's file manager.</p>
-      <p>For data managed by our third-party partners (RevenueCat, AdMob), retention policies are governed by those respective services. If you wish to reset your anonymous advertising identifiers or manage subscription data, please refer to your device settings or the <a href="delete-account.html">Delete Account / Data</a> page for instructions.</p>
+      <p>Because your media files, transcriptions, playlists, and conversion history reside locally on your device, you have full control over your data at all times:</p>
+      <ul>
+        <li>You can clear your conversion history, delete temporary processing caches, or remove downloaded Whisper AI speech models directly within the app's <strong>Settings</strong> and <strong>Speech-to-Text</strong> screens.</li>
+        <li>You can delete exported audio files, recordings, and subtitle files through the app's Library/History views or your device's system Files app.</li>
+        <li>Uninstalling the app permanently removes all local app databases, preferences, and internal cache files.</li>
+      </ul>
+      <p>For anonymous diagnostic or subscription data processed by third-party providers (Firebase, AdMob, RevenueCat), retention is governed by their respective privacy policies. Please visit our <a href="delete-account.html">Delete Account / Data</a> page for step-by-step instructions on resetting identifiers and managing subscriptions.</p>
 
-      <h2>5. Changes to this Privacy Policy</h2>
-      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for operational, legal, or regulatory reasons. The updated policy will be posted on this page with a revised "Last Updated" date.</p>
+      <h2>5. Children's Privacy</h2>
+      <p>Audio Productivity does not knowingly collect personal information from children under the age of 13. If you believe any personal information has been inadvertently provided to us via a support inquiry, please contact us so we can promptly delete it.</p>
 
-      <h2>6. Contact Us</h2>
-      <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+      <h2>6. Changes to this Privacy Policy</h2>
+      <p>We may update this Privacy Policy periodically to reflect new app capabilities, legal requirements, or operational changes. Any updates will be published on this page with an updated "Last Updated" date.</p>
+
+      <h2>7. Contact Us</h2>
+      <p>If you have any questions or concerns about this Privacy Policy or our privacy practices, please contact us at:</p>
       <p><strong>Email:</strong> <a href="mailto:eebrerheem@yahoo.com">eebrerheem@yahoo.com</a></p>
     </div>
 
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="terms.html">Terms of Use</a>
+      <a href="delete-account.html">Delete Account / Data</a>
+      <a href="support.html">Support</a>
     </div>
 
     <footer>
